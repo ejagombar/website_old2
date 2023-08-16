@@ -1,8 +1,23 @@
 import { Tabs, Tab, Navbar, Switch } from '@nextui-org/react'
+import { useState } from 'react'
 
-import { siteConfig } from '../config/site.ts'
+interface Props {
+    currentPage: string
+    setCurrentPage: (currentPage: string) => void
+}
 
-const TopBar = () => {
+type Key = string | number // Define the Key type explicitly
+
+const Header = ({ currentPage, setCurrentPage }: Props) => {
+    const options: string[] = ['Home', 'Projects', 'Notes', 'Links']
+
+    const [selected, setSelected] = useState<Key>('photos')
+
+    const handleSelectionChange = (key: Key) => {
+        setSelected(key)
+        console.log(key)
+    }
+
     return (
         <Navbar
             maxWidth="full"
@@ -11,9 +26,16 @@ const TopBar = () => {
         >
             <p className="text-lg font-bold text-gray-400">Edward Agombar</p>
 
-            <Tabs size="lg" radius="full" color="primary" aria-label="Options">
-                {siteConfig.navItems.map((item) => (
-                    <Tab key={item.href} href={item.href}></Tab>
+            <Tabs
+                size="lg"
+                radius="full"
+                color="primary"
+                aria-label="Options"
+                selectedKey={selected}
+                onSelectionChange={handleSelectionChange}
+            >
+                {options.map((option) => (
+                    <Tab key={option} title={option}></Tab>
                 ))}
             </Tabs>
 
@@ -22,4 +44,4 @@ const TopBar = () => {
     )
 }
 
-export default TopBar
+export default Header

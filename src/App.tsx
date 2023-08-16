@@ -10,12 +10,20 @@ import {
     CardBody,
     Avatar,
 } from '@nextui-org/react'
-import TopBar from './components/header'
+import Header from './components/header'
+import { useState } from 'react'
 
 function App() {
+    const [currentPage, setCurrentPage] = useState<string>('Home')
+
+    const setPage = (page: string) => {
+        setCurrentPage(page)
+        console.log(page)
+    }
+
     return (
         <>
-            <TopBar></TopBar>
+            <Header currentPage={currentPage} setCurrentPage={setPage}></Header>
         </>
     )
 }
