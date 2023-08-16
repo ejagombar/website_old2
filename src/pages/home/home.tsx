@@ -11,7 +11,7 @@ import { button as buttonStyles } from '@nextui-org/theme'
 
 const Home = () => {
     return (
-        <div className="flex flex-col items-center mt-24 mb-24">
+        <div className="flex flex-col items-center mt-24">
             <Card className="max-w-[400px] mb-6">
                 <CardHeader className="flex flex-col items-center">
                     <Avatar
@@ -54,6 +54,7 @@ const Home = () => {
             </Card>
             <Divider></Divider>
             <p>test</p>
+            <div className="flex-grow" />
         </div>
     )
 }

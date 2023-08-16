@@ -1,23 +1,15 @@
 import { Tabs, Tab, Navbar, Switch } from '@nextui-org/react'
 import { useState } from 'react'
 
+import { Key } from 'react'
+
 interface Props {
-    currentPage: string
-    setCurrentPage: (currentPage: string) => void
+    currentPage: Key
+    pageNames: string[]
+    setCurrentPage: (currentPage: Key) => void
 }
 
-type Key = string | number // Define the Key type explicitly
-
-const Header = ({ currentPage, setCurrentPage }: Props) => {
-    const options: string[] = ['Home', 'Projects', 'Notes', 'Links']
-
-    const [selected, setSelected] = useState<Key>('photos')
-
-    const handleSelectionChange = (key: Key) => {
-        setSelected(key)
-        console.log(key)
-    }
-
+const Header = ({ currentPage, setCurrentPage, pageNames }: Props) => {
     return (
         <Navbar
             maxWidth="full"
@@ -31,11 +23,11 @@ const Header = ({ currentPage, setCurrentPage }: Props) => {
                 radius="full"
                 color="primary"
                 aria-label="Options"
-                selectedKey={selected}
-                onSelectionChange={handleSelectionChange}
+                selectedKey={currentPage}
+                onSelectionChange={setCurrentPage}
             >
-                {options.map((option) => (
-                    <Tab key={option} title={option}></Tab>
+                {pageNames.map((pageName) => (
+                    <Tab key={pageName} title={pageName}></Tab>
                 ))}
             </Tabs>
 
