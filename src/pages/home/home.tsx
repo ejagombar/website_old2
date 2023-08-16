@@ -52,8 +52,6 @@ const Home = () => {
                     </div>
                 </CardBody>
             </Card>
-            <Divider></Divider>
-            <p>test</p>
             <div className="flex-grow" />
         </div>
     )

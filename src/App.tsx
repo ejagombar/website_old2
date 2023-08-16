@@ -4,6 +4,7 @@ import Header from './components/header'
 import { useState } from 'react'
 import { Key } from 'react'
 import Home from './pages/home/home.tsx'
+import Footer from './components/footer.tsx'
 
 function App() {
     const pageNames: string[] = ['Home', 'Projects', 'Posts', 'Contact']
@@ -53,12 +54,7 @@ function App() {
                 ></Header>
                 {content}
             </div>
-            <footer className="bg-gray-200 p-4">
-                {/* Your footer content */}
-                <p className="text-center">
-                    {new Date().getFullYear()} Your Company
-                </p>
-            </footer>
+            <Footer />
         </div>
     )
 }
