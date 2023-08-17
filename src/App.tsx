@@ -5,9 +5,11 @@ import { useState } from 'react'
 import { Key } from 'react'
 import Home from './pages/home/home.tsx'
 import Footer from './components/footer.tsx'
+import Projects from './pages/projects/projects.tsx'
+import Posts from './pages/posts/posts.tsx'
 
 function App() {
-    const pageNames: string[] = ['Home', 'Projects', 'Posts', 'Contact']
+    const pageNames: string[] = ['Home', 'Projects', 'Posts']
     const [selected, setSelected] = useState<Key>('Home')
 
     const handleSelectionChange = (key: Key) => {
@@ -22,25 +24,13 @@ function App() {
             content = <Home />
             break
         case 'Projects':
-            content = (
-                <Card>
-                    <CardBody>{<p>Projects</p>}</CardBody>
-                </Card>
-            )
+            content = <Projects />
             break
         case 'Posts':
-            content = (
-                <Card>
-                    <CardBody>{/* Content for the Videos page */}</CardBody>
-                </Card>
-            )
+            content = <Posts />
             break
         default:
-            content = (
-                <Card>
-                    <CardBody>{/* Default content */}</CardBody>
-                </Card>
-            )
+            content = <p>Error. How did we get here?</p>
             break
     }
 

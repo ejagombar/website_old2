@@ -13,6 +13,7 @@ import {
     DownloadIcon,
     EmailIcon,
     LinkedInIcon,
+    DocumentIcon,
 } from '../components/icons'
 
 const LinksBox = () => {
@@ -64,7 +65,7 @@ const LinksBox = () => {
                             variant="solid"
                         >
                             <div className="absolute left-5">CV</div>
-                            <DownloadIcon className="absolute right-5" />
+                            <DocumentIcon className="absolute right-5" />
                         </Button>
                     </div>
                 </CardBody>

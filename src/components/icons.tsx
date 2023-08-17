@@ -118,7 +118,8 @@ export const DocumentIcon: React.FC<IconSvgProps> = ({
                 fill="currentColor"
                 fillRule="evenodd"
                 d="M134.15 118.745h9.6v2.4h-9.6zm0-4.8h9.6v2.4h-9.6zm7.2-12h-9.6c-1.32 0-2.4 1.08-2.4 2.4v19.2c0 1.32 1.068 2.4 2.388 2.4h14.412c1.32 0 2.4-1.08 2.4-2.4v-14.4zm4.8 21.6h-14.4v-19.2h8.4v6h6z"
-                transform="translate(-129.35 -101.945)"
+                // transform="translate(-129.35 -101.945)"
+                transform="translate(-127 -101.945)"
             />
         </svg>
     )

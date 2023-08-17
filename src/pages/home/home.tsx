@@ -19,7 +19,7 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col justify-center pl-6 items-center">
                     <p className="Title text-5xl">Ed Agombar </p>
-                    <p className="Title text-2xl">Software Developer</p>
+                    <p className="Title text-2xl pt-2">Software Engineer</p>
                 </div>
             </div>
             <Card className="max-w-[450px] mb-20">
@@ -28,11 +28,14 @@ const Home = () => {
                 </CardHeader>
                 <Divider />
                 <CardBody>
-                    <p>
+                    <p className="text-lg">
                         I am a 4th Year student at the University of Nottingham
-                        studying Electrong Engineering with Computer Science
-                        (MEng). Looking a job as a software engineer. Take a
-                        look at some of my recent projects in the Project tab or
+                        studying Electronic Engineering with Computer Science
+                        (MEng).
+                    </p>
+                    <p className="text-lg pt-2">
+                        Looking a job as a software engineer. Take a look at
+                        some of my recent projects in the Project tab or
                         download my CV found below.
                     </p>
                 </CardBody>

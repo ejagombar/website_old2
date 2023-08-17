@@ -16,7 +16,7 @@ const Header = ({ currentPage, setCurrentPage, pageNames }: Props) => {
             className="flex justify-between"
             shouldHideOnScroll
         >
-            <p className="text-lg font-bold text-gray-400">Edward Agombar</p>
+            <p className="text-lg font-bold text-gray-400">Ed Agombar</p>
 
             <Tabs
                 size="lg"
@@ -31,7 +31,7 @@ const Header = ({ currentPage, setCurrentPage, pageNames }: Props) => {
                 ))}
             </Tabs>
 
-            <Switch defaultSelected>Dark Mode</Switch>
+            <Switch defaultSelected>Dark </Switch>
         </Navbar>
     )
 }
