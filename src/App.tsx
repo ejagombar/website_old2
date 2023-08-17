@@ -1,5 +1,4 @@
 import './App.css'
-import { Card, CardBody } from '@nextui-org/react'
 import Header from './components/header'
 import { useState } from 'react'
 import { Key } from 'react'
@@ -35,7 +34,7 @@ function App() {
     }
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen ">
             <div className="flex-grow">
                 <Header
                     pageNames={pageNames}
