@@ -1,7 +1,6 @@
-import { Tabs, Tab, Navbar, Switch } from '@nextui-org/react'
-import { MoonIcon } from './MoonIcon'
-import { SunIcon } from './SunIcon'
+import { Tabs, Tab, Navbar } from '@nextui-org/react'
 import { Key } from 'react'
+import ThemeSwitch from './themeswitch'
 
 interface Props {
     currentPage: Key
@@ -31,15 +30,7 @@ const Header = ({ currentPage, setCurrentPage, pageNames }: Props) => {
                 ))}
             </Tabs>
 
-            <Switch
-                defaultSelected
-                size="lg"
-                color="success"
-                startContent={<SunIcon />}
-                endContent={<MoonIcon />}
-            >
-                Dark mode
-            </Switch>
+            <ThemeSwitch />
         </Navbar>
     )
 }
