@@ -22,7 +22,7 @@ const Home = () => {
                     <p className="Title text-2xl">Software Developer</p>
                 </div>
             </div>
-            <Card className="max-w-[450px] mb-6">
+            <Card className="max-w-[450px] mb-20">
                 <CardHeader className="justify-center">
                     <p className="text-2xl">About</p>
                 </CardHeader>
@@ -31,7 +31,9 @@ const Home = () => {
                     <p>
                         I am a 4th Year student at the University of Nottingham
                         studying Electrong Engineering with Computer Science
-                        (MEng). Looking a job as a software engineer.
+                        (MEng). Looking a job as a software engineer. Take a
+                        look at some of my recent projects in the Project tab or
+                        download my CV found below.
                     </p>
                 </CardBody>
             </Card>
