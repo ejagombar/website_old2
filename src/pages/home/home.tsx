@@ -1,27 +1,32 @@
 import {
     Card,
     CardHeader,
-    Avatar,
     CardBody,
     Button,
     Divider,
     Link,
+    Image,
 } from '@nextui-org/react'
-import { button as buttonStyles } from '@nextui-org/theme'
+
+import LinksBox from '../../components/linksBox'
 
 const Home = () => {
     return (
-        <div className="flex flex-col items-center mt-24">
-            <Card className="max-w-[400px] mb-6">
-                <CardHeader className="flex flex-col items-center">
-                    <Avatar
-                        isFocusable
-                        size="lg"
-                        isBordered
-                        radius="lg"
-                        src="/profilepic.jpg"
-                    />
+        <div className="flex flex-col items-center justify-items-center mt-24 mb-26">
+            <div className="flex flex-row mb-20">
+                <div className="pr-4">
+                    <Image width={150} alt="ProfilePic" src="/profilepic.jpg" />
+                </div>
+                <div className="flex flex-col justify-center pl-6 items-center">
+                    <p className="Title text-5xl">Ed Agombar </p>
+                    <p className="Title text-2xl">Software Developer</p>
+                </div>
+            </div>
+            <Card className="max-w-[450px] mb-6">
+                <CardHeader className="justify-center">
+                    <p className="text-2xl">About</p>
                 </CardHeader>
+                <Divider />
                 <CardBody>
                     <p>
                         I am a 4th Year student at the University of Nottingham
@@ -30,28 +35,7 @@ const Home = () => {
                     </p>
                 </CardBody>
             </Card>
-            <Card>
-                <CardHeader>
-                    <p>Links</p>
-                </CardHeader>
-                <CardBody>
-                    <div className="flex flex-row pl-10 pr-10">
-                        <Button
-                            href="https://github.com/nextui-org/nextui"
-                            as={Link}
-                            color="primary"
-                            variant="solid"
-                            className={buttonStyles({
-                                color: 'primary',
-                                radius: 'full',
-                                variant: 'bordered',
-                            })}
-                        >
-                            Github
-                        </Button>
-                    </div>
-                </CardBody>
-            </Card>
+            <LinksBox />
             <div className="flex-grow" />
         </div>
     )
