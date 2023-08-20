@@ -11,7 +11,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: 'Fira Code , sans-serif',
+                // sans: 'Fira Code , sans-serif',
             },
         },
     },

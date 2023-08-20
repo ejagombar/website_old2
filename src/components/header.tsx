@@ -1,4 +1,10 @@
-import { Tabs, Tab, Navbar } from '@nextui-org/react'
+import {
+    Tabs,
+    Tab,
+    Navbar,
+    NavbarBrand,
+    NavbarContent,
+} from '@nextui-org/react'
 import { Key } from 'react'
 import ThemeSwitch from './themeswitch'
 
@@ -8,29 +14,23 @@ interface Props {
     setCurrentPage: (currentPage: Key) => void
 }
 
-const Header = ({ currentPage, setCurrentPage, pageNames }: Props) => {
+const Header = () => {
     return (
-        <Navbar
-            maxWidth="full"
-            className="flex justify-between"
-            shouldHideOnScroll
-        >
-            <p className="text-lg font-bold text-gray-400">Ed Agombar</p>
+        <Navbar>
+            <NavbarBrand>
+                <p className="text-lg ">StudentWalletLogo</p>
+            </NavbarBrand>
 
-            <Tabs
-                size="lg"
-                radius="full"
-                color="primary"
-                aria-label="Options"
-                selectedKey={currentPage}
-                onSelectionChange={setCurrentPage}
+            <NavbarContent
+                justify="center"
+                className="hidden sm:flex gap-4 text-2xl"
             >
-                {pageNames.map((pageName) => (
-                    <Tab key={pageName} title={pageName}></Tab>
-                ))}
-            </Tabs>
+                TimeLine
+            </NavbarContent>
 
-            <ThemeSwitch />
+            <NavbarContent justify="end">
+                <ThemeSwitch />
+            </NavbarContent>
         </Navbar>
     )
 }
